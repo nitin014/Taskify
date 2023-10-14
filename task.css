@@ -1,0 +1,249 @@
+/* Global Styles (you can add more as needed) */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #8fb1d0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #a4d4ec;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Center header vertically */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* Set the header to occupy the full viewport height */
+}
+
+.header-container {
+  text-align: center;
+}
+
+/* Task Assignment Section */
+
+.task-form {
+  background-color: #d7edf6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-form h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task-form button {
+  background-color: #40469d;
+  color: #d8e7ee;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Assigned Tasks Section */
+
+.task-list {
+  background-color: #93c4dc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-list h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.task-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  background-color: #96a6e4;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Project Completion Section (Add your styles here) */
+
+/* Messaging Section (Add your styles here) */
+
+/* Responsive Styles (you can customize these as needed) */
+
+@media (max-width: 768px) {
+  .task-form {
+    padding: 10px;
+  }
+  .task-list {
+    padding: 10px;
+  }
+}
+
+/* chat.css */
+
+#chat-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #bbe595;
+  resize: both;
+  /* Allow resizing both horizontally and vertically */
+  overflow: auto;
+  /* Add scrollbars when content overflows */
+  min-width: 200px;
+  /* Set minimum width */
+  min-height: 200px;
+  /* Set minimum height */
+  max-width: 500px;
+  /* Set maximum width */
+  max-height: 600px;
+  /* Set maximum height */
+  position: relative;
+  /* Add relative positioning for resize handle */
+}
+
+/* Add a resize handle in the bottom right corner */
+
+#resize-handle {
+  width: 10px;
+  height: 10px;
+  background-color: #5692bb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+  /* Display a diagonal resize cursor */
+  z-index: 1;
+  /* Ensure the handle is on top of other content */
+}
+
+/* chat.css */
+
+#chat-container {
+  border: 1px solid #050607;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #25506a;
+}
+
+#chat-messages {
+  height: 80%;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.user-message {
+  background-color: #3498db;
+  color: #dfd4d4;
+  align-self: flex-end;
+}
+
+.other-message {
+  background-color: #f8f0f0;
+  color: #333;
+  align-self: flex-start;
+}
+
+#message-input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#send-button {
+  width: 100%;
+  padding: 5px;
+  background-color: #32566e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#send-button:hover {
+  background-color: #16314e;
+}
+
+#search-filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#filter-status {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-filter-button {
+  background-color: #16314e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Add this CSS code to your task.css file to highlight filtered tasks */
+
+/* Style for filtered tasks */
+
+.task.filtered {
+  background-color: yellow;
+  /* Change to the desired highlight color */
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="task.css" />
+    <!-- Link to the external CSS file -->
+    <title>Project Manager</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Projects</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Task Assignment Section -->
+      <div class="task-form">
+        <h3>Assign Task</h3>
+        <form id="task-form">
+          <input
+            type="text"
+            placeholder="Task Name"
+            name="taskName"
+            required
+          /><br />
+          <input
+            type="text"
+            placeholder="Assignee"
+            name="assignee"
+            required
+          /><br />
+          <input
+            type="date"
+            placeholder="Due Date"
+            name="dueDate"
+            required
+          /><br />
+          <textarea
+            placeholder="Task Description"
+            name="taskDescription"
+            rows="4"
+          ></textarea
+          ><br />
+          <button type="button" id="assign-button">Assign</button>
+        </form>
+      </div>
+
+      <form id="search-filter-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search by task name"
+        />
+        <select id="filter-status">
+          <option value="">All Status</option>
+          <option value="todo">To-Do</option>
+          <option value="inprogress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+        <button type="button" id="search-filter-button">Apply Filters</button>
+      </form>
+
+      <!-- Assigned Tasks Section -->
+      <div class="task-list">
+        <h3>Assigned Tasks</h3>
+        <ul id="task-list">
+          <!-- Display assigned tasks here with details and status -->
+          <!-- Example task item:
+          <li>
+            <strong>Task Name:</strong> Task 1
+            <br />
+            <strong>Assignee:</strong> User A
+            <br />
+            <strong>Due Date:</strong> 2023-10-31
+            <br />
+            <strong>Description:</strong> Task description goes here.
+            <br />
+            <strong>Status:</strong> In Progress
+          </li>
+          -->
+          <li data-status="todo">
+            <strong>Task Name:</strong> Task 1
+            <br />
+            <strong>Assignee:</strong> User A
+            <br />
+            <strong>Due Date:</strong> 2023-10-31
+            <br />
+            <strong>Description:</strong> Task description goes here.
+            <br />
+            <strong>Status:</strong> To-Do
+          </li>
+          <li data-status="inprogress">
+            <strong>Task Name:</strong> Task 2
+            <br />
+            <strong>Assignee:</strong> User B
+            <br />
+            <strong>Due Date:</strong> 2023-11-15
+            <br />
+            <strong>Description:</strong> Another task description.
+            <br />
+            <strong>Status:</strong> In Progress
+          </li>
+        </ul>
+      </div>
+
+      <!-- Project Completion Graph Section -->
+
+      <!-- Messaging Section -->
+      <div class="messaging">
+        <h3>Messaging</h3>
+        <div id="chat-container">
+          <div id="chat-messages">
+            <!-- Messages will appear here -->
+          </div>
+          <div id="resize-handle"></div>
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type your message"
+          />
+          <button id="send-button">Send</button>
+        </div>
+        <!-- Add messaging interface here -->
+        <!-- Example: You can create a simple chat-like UI for messaging. -->
+      </div>
+    </div>
+
+    <script src="Script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>

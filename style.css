@@ -1,0 +1,88 @@
+/* styles.css */
+
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #91d0d8;
+  /* Light Blue Background Color */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Form Styles */
+
+.login-form {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black Shade */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for screens smaller than 768px wide */
+  .container {
+    padding: 10px;
+  }
+  .login-form {
+    padding: 10px;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  /* Add top and bottom padding to create space */
+  text-align: right;
+  /* Center the text horizontally */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Optional background color for the footer */
+}
+
+footer p {
+  margin: 0;
+  /* Remove the default margin to prevent extra space */
+  transition: transform 0.3s;
+  /* Add a smooth transition effect */
+}
+
+footer:hover p {
+  transform: translateY(10px);
+  color: #aee354;
+  /* Change text color on hover */
+  font-size: 20px;
+  /* Move the text down on hover */
+}

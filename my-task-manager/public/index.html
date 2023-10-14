@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+  </head>
+
+  <body>
+    <h1>Chat Application</h1>
+
+    <!-- Input field for username -->
+    <input type="text" id="username" placeholder="Enter your username" />
+
+    <!-- Chat messages container -->
+    <div id="chat-container">
+      <ul id="messages"></ul>
+    </div>
+
+    <!-- Input field for messages -->
+    <input type="text" id="message" placeholder="Type a message" />
+
+    <!-- Send button -->
+    <button id="send">Send</button>
+
+    <!-- Include Socket.io library -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Client-side JavaScript -->
+    <script>
+      /* const socket = io();
+
+                // Get references to HTML elements
+                const usernameInput = document.getElementById("username");
+                const messageInput = document.getElementById("message");
+                const sendButton = document.getElementById("send");
+                const messagesList = document.getElementById("messages");
+
+                // Listen for user input and send messages
+                sendButton.addEventListener("click", () => {
+                    const username = usernameInput.value;
+                    const message = messageInput.value;
+
+                    if (username && message) {
+                        socket.emit("chat message", {
+                            username,
+                            message
+                        });
+                        messageInput.value = "";
+                    }
+                });
+
+                // Receive and display messages
+                socket.on("chat message", (data) => {
+                    const {
+                        username,
+                        message
+                    } = data;
+                    const li = document.createElement("li");
+                    li.textContent = `${username}: ${message}`;
+                    messagesList.appendChild(li);
+                });
+                */
+      // Create a Socket.io instance
+      const socket = io();
+
+      // Handle sending messages
+      const messageInput = document.getElementById("message-input");
+      const sendButton = document.getElementById("send-button");
+
+      sendButton.addEventListener("click", () => {
+        const message = messageInput.value;
+        if (message) {
+          socket.emit("chatMessage", message); // Send the message to the server
+          messageInput.value = "";
+        }
+      });
+
+      // Handle receiving messages
+      const chatMessages = document.getElementById("chat-messages");
+
+      socket.on("chatMessage", (message) => {
+        const messageElement = document.createElement("div");
+        messageElement.textContent = message;
+        chatMessages.appendChild(messageElement);
+      });
+    </script>
+  </body>
+</html>
